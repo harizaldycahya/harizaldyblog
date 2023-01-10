@@ -85,6 +85,7 @@ span{
   height: 20px;
   width: 20px;
   background: black;
+  margin: 2rem;
 }
 .ham i{
   font-size: 2rem;
@@ -122,10 +123,18 @@ span{
 
 .post{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  /* grid-template-columns: 2fr 1fr; */
+  grid-template-columns: 1fr;
   width: 90%;
   margin: auto;
   gap: 1.5rem;
+}
+.article{
+  padding: 1.5rem;
+  box-shadow: 3px 3px 20px rgb(203, 209, 210);
+  background-color: white;
+  border-radius: 1rem;
+  margin: 3rem 0rem 3rem 0rem;
 }
 .post h1{
   font-size: 3rem;
@@ -139,16 +148,21 @@ span{
 
 .related{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
-  padding: 1rem;
+  padding: 1rem 1rem 4rem 1rem;
   box-shadow: 3px 3px 20px rgb(203, 209, 210);
   background-color: white;
   border-radius: 1rem;
 } 
 
-.related .label{
+/* .related .label{
   grid-column: span 2;
+} */
+
+.related .related_title{
+  font-size: 1.5rem;
+  font-family: 'Dosis', sans-serif;
 }
 
 /* Post Page End*/
@@ -158,13 +172,6 @@ span{
 .title{
   width: 90%;
   margin: auto;
-}
-
-.article{
-  padding: 5rem;
-  box-shadow: 3px 3px 20px rgb(203, 209, 210);
-  background-color: white;
-  border-radius: 1rem;
 }
 
 .hero{
@@ -256,10 +263,29 @@ span{
   border-radius: 50%;
 }
 
-
-.tag{
+.REACT{
   display: inline-block;
-  background-color: rgb(177, 255, 177);
+  background-color: #7F58AF;
+  color: white;
+  font-weight: bolder;
+  padding: .5rem 2rem .5rem 2rem;
+  border-radius: 1rem;
+  margin: 1rem 0rem 1rem 0rem;
+}
+.CSS{
+  display: inline-block;
+  background-color: #64C5EB;
+  color: white;
+  font-weight: bolder;
+  padding: .5rem 2rem .5rem 2rem;
+  border-radius: 1rem;
+  margin: 1rem 0rem 1rem 0rem;
+}
+.DESIGN{
+  display: inline-block;
+  background-color: #FEB326;
+  color: white;
+  /* background-color: #E84D8A; */
   font-weight: bolder;
   padding: .5rem 2rem .5rem 2rem;
   border-radius: 1rem;
@@ -342,7 +368,7 @@ span{
   /* Post Page */
 
   .post{
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
   }
   .post h1{
     font-size: 3rem;
@@ -370,6 +396,7 @@ span{
   }
 
   .article{
+    padding: 2rem;
   }
 
   .hero{
@@ -482,6 +509,9 @@ span{
   .post{
     grid-template-columns: 2fr 1fr;
   }
+  .article{
+    padding: 4rem;
+  }
   .post h1{
     font-size: 3rem;
   }
@@ -505,9 +535,6 @@ span{
   /* Title Comp */
 
   .title{
-  }
-
-  .article{
   }
 
   .hero{
@@ -610,6 +637,9 @@ span{
   .post{
     grid-template-columns: 2fr 1fr;
   }
+  .article{
+    padding: 4rem;
+  }
   .post h1{
     font-size: 3rem;
   }
@@ -634,10 +664,6 @@ span{
 
   .title{
   }
-
-  .article{
-  }
-
   .hero{
   }
   .cards_container{
