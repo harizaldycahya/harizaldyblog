@@ -2,25 +2,30 @@ import Sidebar from "../components/Sidebar"
 import {motion} from "framer-motion"
 import { useState } from 'react';
 import { useRouter  } from 'next/router'
-export default function Post({ children, href }) {
+export default function Post() {
 
   const [blogs, setBlogs] = useState([
-    {id:0, tag:"REACT", title: '10 Tips for Optimizing Your React.js Applications', img:'assets/thumb (1).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
-    {id:1, tag:"CSS", title: 'A Beginner Guide to CSS Animations', img:'assets/thumb (2).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
-    {id:2, tag:"DESIGN", title: '5 Tips for Creating an Engaging Web Design', img:'assets/thumb (3).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
-    {id:3, tag:"REACT", title: 'The Benefits of Using React.js for Your Next Project', img:'assets/thumb (4).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
-    {id:4, tag:"REACT", title: '5 Common React.js Mistakes and How to Avoid Them', img:'assets/thumb (5).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
-    {id:5, tag:"CSS", title: 'An Introduction to CSS Grid', img:'assets/thumb (6).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
+    {id:0, tag:"REACT", slug:'10_tips_for_optimizing_your_reactjs_applications', title: '10 Tips for Optimizing Your React.js Applications', img:'assets/thumb (1).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
+    {id:1, tag:"CSS", slug:'a_beginner_guide_to_css_animations',title: 'A Beginner Guide to CSS Animations', img:'assets/thumb (2).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
+    {id:2, tag:"DESIGN", slug:'5_tips_for_creating_an_engaging_web_design',title: '5 Tips for Creating an Engaging Web Design', img:'assets/thumb (3).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
+    {id:3, tag:"REACT", slug:'the_benefits_of_using_reactjs_for_your_next_project',title: 'The Benefits of Using React.js for Your Next Project', img:'assets/thumb (4).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
+    {id:4, tag:"REACT", slug:'5_common_reactjs_mistakes_and_how_to_avoid_them',title: '5 Common React.js Mistakes and How to Avoid Them', img:'assets/thumb (5).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
+    {id:5, tag:"CSS", slug:'an_introduction_to_css_grid',title: 'An Introduction to CSS Grid', img:'assets/thumb (6).jpg', des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', date:"02 April . 2021"},
     ]);
 
     const { asPath, pathname } = useRouter();
+    const blog = blogs.find(blog => {
+      return "/"+blog.slug == asPath;
+    }); 
+    if(!blog) return 'loading..';
+    console.log(asPath);
     return (
+      
       <div className="post">
         <div className=" article">
-        <div className="tag" >REACT</div>
-          <h1>10 Tips for Optimizing your React.js Applications</h1>
-          <img src="assets/1.jpg" alt="" />
-          {asPath}
+        <div className={blog.tag} >{blog.tag}</div>
+          <h1>{blog.title}</h1>
+          <img src={blog.img} alt="" />
           <p>React is a JavaScript library for building user interfaces. It was developed by Facebook, and is often used for building single-page applications and mobile applications.
           React allows developers to create reusable UI components. When a component's state changes, React will efficiently update and re-render the component, making it easy to build interactive user interfaces.
           React uses a virtual DOM a lightweight in-memory representation of the actual DOM to improve the performance of rendering components. Instead of updating the DOM directly, React creates a virtual DOM representation of the desired state, and then calculates the minimal set of changes needed to transform the current DOM into the desired state. This helps to minimize the number of DOM operations, and can improve the performance of a React application.

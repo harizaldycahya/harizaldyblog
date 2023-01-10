@@ -35,7 +35,7 @@ const Cards = (props) => {
                 </div>
                 <div className="col1">
                     {blogs2.map((blog)=>(
-                        <Link href="/post" key={blog.id}>
+                        <Link href={blog.slug} key={blog.id}>
                             <motion.div  
                             initial="hidden"
                             whileInView="visible"
