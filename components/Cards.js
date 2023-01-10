@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion'
 import Sidebar from './Sidebar';
 import Link from 'next/link'
