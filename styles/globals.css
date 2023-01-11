@@ -196,10 +196,20 @@ span{
   align-items: start;
   gap: 1.5rem;
   margin: 1.5rem 0rem 1.5rem 0rem;
+  grid-auto-rows: minmax(min-content, max-content);
 }
-.col1 a{
+.col1 a,.col2 a{
   color: black;
   text-decoration: none;
+}
+.col2{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0rem 1.5rem 0rem;
+  grid-auto-rows: minmax(min-content, max-content);
 }
 .card{
   /* border: .3rem solid black; */
@@ -245,7 +255,7 @@ span{
   display: grid;
   grid-template-columns: 1fr;
   align-content: start;
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  padding: 1.5rem;
   display: grid;
   gap: 1.5rem;
   margin: 1.5rem 0rem 1.5rem 0rem;
@@ -315,6 +325,10 @@ span{
 .quote{
   min-height: 20rem;
 }
+.recents a{
+  color: black;
+  text-decoration: none;
+}
 .recent{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -330,7 +344,14 @@ span{
 .recent p{
   font-size: 1rem;
 }
-
+.recent .img_container{
+  display: flex;
+  justify-content: flex-end;
+}
+.recent img{
+  width: 5rem;
+  aspect-ratio: 1/1;
+}
 .contact{
   text-align: center;
   width: 80%;
@@ -414,6 +435,9 @@ span{
     grid-template-columns: 1fr;
   }
   .col1 a{
+  }
+  .col2{
+    grid-template-columns: 1fr 1fr;
   }
   .card{
   }
@@ -552,6 +576,9 @@ span{
     grid-template-columns: 1fr;
   }
   .col1 a{
+  }
+  .col2{
+    grid-template-columns: 1fr 1fr;
   }
   .card{
   }

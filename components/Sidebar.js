@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import { blogs } from '../pages/Index';
+import Link from 'next/link'
 const Sidebar = () => {
     return ( 
         <div className="sidebar">
@@ -38,42 +40,21 @@ const Sidebar = () => {
                 hidden: { opacity: 0, scale: 0 }
             }}
             className="card recents">
-                <h2 className='label' >
+                    <h2 className='label' >
                         <span>
                         Rec
                         </span>
                         ents Posts
                     </h2>
-                    <div className='recent' ><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, molestias?</p>
-                        <div className='img_container'>
-                            <img src="assets/square.jpg" alt="" />
-                        </div>
-                        </div>
-                    <div className='recent' ><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, molestias?</p>
-                        <div className='img_container'>
-                            <img src="assets/square.jpg" alt="" />
-                        </div>
-                        </div>
-                    <div className='recent' ><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, molestias?</p>
-                        <div className='img_container'>
-                            <img src="assets/square.jpg" alt="" />
-                        </div>
-                        </div>
-                    <div className='recent' ><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, molestias?</p>
-                        <div className='img_container'>
-                            <img src="assets/square.jpg" alt="" />
-                        </div>
-                        </div>
-                    <div className='recent' ><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, molestias?</p>
-                        <div className='img_container'>
-                            <img src="assets/square.jpg" alt="" />
-                        </div>
-                        </div>
-                    <div className='recent' ><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, molestias?</p>
-                        <div className='img_container'>
-                            <img src="assets/square.jpg" alt="" />
-                        </div>
-                        </div>
+                    {blogs.map((blog)=>(
+                        <Link href={blog.slug} key={blog.id}>
+                            <div className='recent' ><p>{blog.title}</p>
+                                <div className='img_container'>
+                                    <img src={blog.img} alt="" />
+                                </div>
+                            </div>
+                        </Link>
+                    ))}
             </motion.div>
             <motion.div 
             initial="hidden"

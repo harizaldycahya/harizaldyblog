@@ -10,7 +10,6 @@ export default function Post() {
       return "/"+blog.slug == asPath;
     }); 
     if(!blog) return 'loading..';
-    console.log(asPath);
     return (
       
       <div className="post">
