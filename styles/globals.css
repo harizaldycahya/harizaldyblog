@@ -271,6 +271,8 @@ span{
 
 .about img{
   border-radius: 50%;
+  width: 15rem;
+  margin-bottom: 2rem;
 }
 
 .REACT{
@@ -601,8 +603,11 @@ span{
   .sidebar{
     grid-template-columns: 1fr;
   }
-
+  .sidebar .sidebar_contact{
+    order: 3;
+  }
   .about{
+    order: 1;
   }
 
   .about .label{
@@ -619,14 +624,17 @@ span{
   }
 
   .categories{
+    order: 4;
     grid-template-columns: 1fr;
+
   }
   .category{
   }
   .category:hover{
     
   }
-  .quote{
+  .recents{
+    order: 2;
   }
   .recent{
     grid-template-columns: 1fr 1fr;

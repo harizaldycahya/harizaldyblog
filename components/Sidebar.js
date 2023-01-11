@@ -1,8 +1,86 @@
 import { motion } from 'framer-motion'
-import { blogs } from '../pages/Index';
+import { blogs } from '../pages/Index'
 import Link from 'next/link'
+import React, { useState } from 'react';
 const Sidebar = () => {
-    return ( 
+
+    const blogs = [
+        // POST 0
+        {id:0, 
+          tag:"REACT", 
+          slug:'10_tips_for_optimizing_your_reactjs_applications', 
+          title: '10 Tips for Optimizing Your React.js Applications', 
+          img:'assets/thumb (1).jpg', 
+          des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', 
+          date:"02 April . 2021",
+          article:"test",
+        },
+        // POST 0 END
+      
+      
+        // POST 1
+        {id:1, 
+          tag:"CSS", 
+          slug:'a_beginner_guide_to_css_animations',
+          title: 'A Beginner Guide to CSS Animations', 
+          img:'assets/thumb (2).jpg', 
+          des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', 
+          date:"02 April . 2021",
+          article:"test",
+        },
+        // POST 1 END
+      
+      
+        // POST 2
+        {id:2, 
+          tag:"DESIGN", 
+          slug:'5_tips_for_creating_an_engaging_web_design',
+          title: '5 Tips for Creating an Engaging Web Design', 
+          img:'assets/thumb (3).jpg', 
+          des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', 
+          date:"02 April . 2021",
+          article:"test",
+        },
+        // POST 2 END
+      
+        // POST 3
+        {id:3, 
+          tag:"REACT", 
+          slug:'the_benefits_of_using_reactjs_for_your_next_project',
+          title: 'The Benefits of Using React.js for Your Next Project', 
+          img:'assets/thumb (4).jpg', 
+          des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', 
+          date:"02 April . 2021",
+          article:"test",
+        },
+        // POST 3 END
+      
+        // POST 4
+        {id:4, 
+          tag:"REACT", 
+          slug:'5_common_reactjs_mistakes_and_how_to_avoid_them',
+          title: '5 Common React.js Mistakes and How to Avoid Them', 
+          img:'assets/thumb (5).jpg', 
+          des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', 
+          date:"02 April . 2021",
+          article:"test",
+        },
+        // POST 4 END
+      
+        // POST 5
+        {id:5, 
+          tag:"CSS", 
+          slug:'an_introduction_to_css_grid',
+          title: 'An Introduction to CSS Grid', 
+          img:'assets/thumb (6).jpg', 
+          des:'This is an example intro text of the article. You can put intro text to every article to grab the attention of the users...', 
+          date:"02 April . 2021",
+          article:"test",
+        },
+        // POST 5 END
+      ];
+
+    return (
         <div className="sidebar">
             <motion.div 
             initial="hidden"
@@ -18,16 +96,13 @@ const Sidebar = () => {
                     <span>
                     Abo
                     </span>
-                    ut</h2>
+                    ut Me</h2>
                 <div className='img_container'>
-                    <img src="assets/square.jpg" alt="" />
+                    <img src="assets/photo.png" alt="" />
                 </div>
-                <h2 className="title" >Harizaldy Cahya P</h2>
+                <h2 className="title" >Harizaldy Cahya</h2>
                 <p className="content">When it comes to creating is a website for your business, an attractive design</p>
                 
-                <p className="date" >
-                    <a href="">About Me</a> / <a href="">Contact Me</a>
-                </p>
                 <div className="space5"></div>
             </motion.div>   
             <motion.div 
@@ -68,14 +143,14 @@ const Sidebar = () => {
             className="card sidebar_contact">
                     <h2 className='label' >
                         <span>
-                        Con
+                        My W
                         </span>
-                        tact Me
+                        orks
                     </h2>
                     <div className='contact_button'>
                         <div className="space5"></div>
-                        <div className='button' >Email </div>
-                        <div className='button' >Twitter</div>
+                        <div className='button' >Github </div>
+                        <div className='button' >Portfolio</div>
                     </div>
             </motion.div>
             <motion.div 
