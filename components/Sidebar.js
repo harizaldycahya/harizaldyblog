@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { blogs } from '../pages/Index'
 import Link from 'next/link'
 import React, { useState } from 'react';
 const Sidebar = () => {

@@ -3,7 +3,6 @@ import Cards from "../components/Cards"
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Sidebar from "../components/Sidebar";
-import { blogs } from './Index';
 export default function CSS() {
 
     const blogs = [
