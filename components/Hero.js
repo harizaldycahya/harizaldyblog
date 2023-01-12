@@ -1,4 +1,4 @@
-// import bg from 'assets/bg.svg'
+
 import {motion} from 'framer-motion'
 
 const Hero = () => {

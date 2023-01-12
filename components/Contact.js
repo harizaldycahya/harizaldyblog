@@ -1,4 +1,4 @@
-import background from "../public/assets/square.jpg"
+
 
 const Contact = () => {
     return ( 

@@ -1,6 +1,5 @@
 import Cards from "../components/Cards"
 import Hero from "../components/Hero"
-import bg from '../public/assets/bg.svg'
 import { useState } from 'react';
 
 const blogs = [
@@ -75,7 +74,7 @@ const blogs = [
 
 export default function Home() {
   return (
-    <div className="home" style={{backgroundImage: `url(${bg})`}}>
+    <div className="home">
         <Hero></Hero>
         <Cards blogs1={blogs.filter((blog)=> blog.id % 2===0 || blog.id === 0)} blogs2={blogs.filter((blog)=> blog.id % 2===1)}></Cards>
     </div>
