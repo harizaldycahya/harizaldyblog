@@ -36,7 +36,7 @@ const Hero = () => {
                         animate={{ opacity: 1 }}
                         transition={{type: "spring",stiffness:100, duration: .5, delay:.4}}>Here, you will find the latest news, tips, and resources for building efficient and scalable applications with React.js. 
                 <br />
-                Whether you are a seasoned developer or new to the world of JavaScript, we hope you will find something useful and interesting in our articles.</motion.p>
+                Whether you are a seasoned developer or new to the world of JavaScript, I hope you will find something useful and interesting in my articles.</motion.p>
             </div>
             <div className="space20"></div>
         </div>

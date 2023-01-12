@@ -100,7 +100,7 @@ const Sidebar = () => {
                     <img src="assets/photo.png" alt="" />
                 </div>
                 <h2 className="title" >Harizaldy Cahya</h2>
-                <p className="content">When it comes to creating is a website for your business, an attractive design</p>
+                <p className="content">I am always looking for new ways to improve my skills and stay current with the latest web development trends and best practices.</p>
                 
                 <div className="space5"></div>
             </motion.div>   
@@ -148,8 +148,12 @@ const Sidebar = () => {
                     </h2>
                     <div className='contact_button'>
                         <div className="space5"></div>
-                        <div className='button' >Github </div>
-                        <div className='button' >Portfolio</div>
+                        <a href="https://github.com/harizaldycahya">
+                            <div className='button' >Github &nbsp; <i class="fa-brands fa-square-github"></i> </div>
+                        </a>
+                        <a href="https://harizaldycahya.github.io/">
+                            <div className='button' >Portfolio &nbsp; <i class="fa-solid fa-laptop-code"></i> </div>
+                        </a>
                     </div>
             </motion.div>
             <motion.div 

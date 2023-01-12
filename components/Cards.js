@@ -25,9 +25,12 @@ const Cards = (props) => {
                                 </div>
                                 <div className={blog.tag} >{blog.tag}</div>
                                 <h2 className="title" >{blog.title}</h2>
-                                <p className="content">{blog.des}</p>
+                                <p className="content">
+                                    {blog.des.length > 200 ?
+                                        `${blog.des.substring(0, 200)}...` : blog.des
+                                    }
+                                </p>
                                 <div className="space5"></div>
-                                <p className="date" >{blog.date}</p>
                             </motion.div>
                         </Link>
                     ))}
@@ -50,15 +53,15 @@ const Cards = (props) => {
                                 </div>
                                 <div className={blog.tag} >{blog.tag}</div>
                                 <h2 className="title" >{blog.title}</h2>
-                                <p className="content">{blog.des}</p>
+                                <p className="content">
+                                    {blog.des.length > 200 ?
+                                        `${blog.des.substring(0, 200)}...` : blog.des
+                                    }
+                                </p>
                                 <div className="space5"></div>
-                                <p className="date" >{blog.date}</p>
                             </motion.div>
                         </Link>
                     ))}
-                </div>
-                <div className="load">
-                    <h3>Load More</h3>
                 </div>
             </div>
             <Sidebar></Sidebar>

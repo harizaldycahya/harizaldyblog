@@ -36,10 +36,11 @@ const Navbar = () => {
             {openMenu ? (
              <motion.div className='ham_items'>
                 <div>
-                    <motion.a whileHover={{y:-10}} transition={{type:"spring", stiffness:100}} href="/#projects"><h3 style={{color:'black'}}>Projects</h3></motion.a>
-                    <motion.a whileHover={{y:-10}} transition={{type:"spring", stiffness:100}} href="/#skills"><h3 style={{color:'black'}}>Skills</h3></motion.a>
-                    <motion.a whileHover={{y:-10}} transition={{type:"spring", stiffness:100}} href="/#contact"><h3 style={{color:'black'}}>Contact</h3></motion.a>
-                    <motion.a whileHover={{y:-10}} transition={{type:"spring", stiffness:100}} href="https://github.com/harizaldycahya"><h3 style={{color:'black'}}>Github</h3></motion.a>
+                    <motion.a whileHover={{y:-10}} transition={{type:"spring", stiffness:100}} href="/"><h3 style={{color:'black'}}>Blogs</h3></motion.a>
+                    <motion.a whileHover={{y:-10}} transition={{type:"spring", stiffness:100}} href="/react"><h3 style={{color:'black'}}>React</h3></motion.a>
+                    <motion.a whileHover={{y:-10}} transition={{type:"spring", stiffness:100}} href="/css"><h3 style={{color:'black'}}>Css</h3></motion.a>
+                    <motion.a whileHover={{y:-10}} transition={{type:"spring", stiffness:100}} href="/design"><h3 style={{color:'black'}}>Design</h3></motion.a>
+                    <motion.a whileHover={{y:-10}} transition={{type:"spring", stiffness:100}} href="https://harizaldycahya.github.io"><h3 style={{color:'black'}}>Portfolio</h3></motion.a>
                 </div>
             </motion.div>
             ) : null}
